@@ -7,6 +7,7 @@ import { ProductsService } from '../../services/products.service';
   styleUrl: './all-products.component.scss'
 })
 export class AllProductsComponent implements OnInit {
+[x: string]: any;
 
   allProducts:any[] = []
 
@@ -20,7 +21,8 @@ ngOnInit(): void {
 
   getProduct(){
     this._ProductsService.getAllProducts().subscribe((res:any) =>{
-      console.log(res)
+     this.allProducts  = res
+     console.log(res)
     })
   }
 }
