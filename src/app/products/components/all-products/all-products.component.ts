@@ -10,7 +10,7 @@ export class AllProductsComponent implements OnInit {
 
   allProducts:any[] = []
 
-    constructor(private ProductsService:ProductsService){}
+    constructor(private _ProductsService:ProductsService){}
 
 
 ngOnInit(): void {
@@ -18,8 +18,8 @@ ngOnInit(): void {
 }
 
 
-getProduct(){
-    this.ProductsService.getAllProducts().subscribe((res:any) =>{
+  getProduct(){
+    this._ProductsService.getAllProducts().subscribe((res:any) =>{
       console.log(res)
     })
   }
