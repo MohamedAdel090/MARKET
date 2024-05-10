@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class ProductsService {
 
-  constructor(private _HttpClient:HttpClient) { }
+  constructor(private HttpClient:HttpClient) { }
 
   getAllProducts(){
-      return this._HttpClient.get('https://fakestoreapi.com/products')
+      return this.HttpClient.get('https://fakestoreapi.com/products')
   }
 }
