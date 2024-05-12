@@ -4,12 +4,13 @@ import { ProductsService } from '../../services/products.service';
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
-  styleUrl: './all-products.component.scss'
+  styleUrls: ['./all-products.component.scss'] // Change styleUrl to styleUrls
 })
-export class AllProductsComponent implements OnInit {
-[x: string]: any;
 
-  allProducts:any[] = []
+export class AllProductsComponent implements OnInit {
+
+
+  Products:any[] = []
 
     constructor(private _ProductsService:ProductsService){}
 
@@ -21,8 +22,8 @@ ngOnInit(): void {
 
   getProduct(){
     this._ProductsService.getAllProducts().subscribe((res:any) =>{
-     this.allProducts  = res
-     console.log(res)
+      this.Products  = res; 
+      console.log(res)
     })
   }
 }
