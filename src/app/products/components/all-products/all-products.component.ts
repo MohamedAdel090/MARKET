@@ -4,7 +4,7 @@ import { ProductsService } from '../../services/products.service';
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
-  styleUrls: ['./all-products.component.scss'] // Change styleUrl to styleUrls
+  styleUrls: ['./all-products.component.scss'] 
 })
 
 export class AllProductsComponent implements OnInit {
@@ -22,7 +22,7 @@ ngOnInit(): void {
 
   getProduct(){
     this._ProductsService.getAllProducts().subscribe((res:any) =>{
-      this.Products  = res; 
+      this.Products= res  
       console.log(res)
     })
   }
