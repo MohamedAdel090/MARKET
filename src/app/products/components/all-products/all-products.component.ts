@@ -22,7 +22,7 @@ ngOnInit(): void {
 
   getProduct(){
     this._ProductsService.getAllProducts().subscribe((res:any) =>{
-      this.Products= res  
+      this.Products  = res; 
       console.log(res)
     })
   }

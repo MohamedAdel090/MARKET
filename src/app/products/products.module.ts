@@ -8,9 +8,7 @@ import { ProductsDetalisComponent } from './components/products-detalis/products
 
 @NgModule({
   declarations: [
-    AllProductsComponent,
     ProductsDetalisComponent,
-    AllProductsComponent
   ],
   imports: [
     CommonModule,
