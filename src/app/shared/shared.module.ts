@@ -6,12 +6,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SpineerComponent } from './components/spineer/spineer.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SpineerComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,7 @@ import { FormsModule } from '@angular/forms';
   ],
   exports: [
     HeaderComponent,
-    
+    SpineerComponent
   ]
 })
 export class SharedModule { }
