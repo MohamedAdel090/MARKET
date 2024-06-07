@@ -14,11 +14,14 @@ export class AllProductsComponent implements OnInit {
 
   Products:any[] = []
 
+  categories:any[] = []
+
     constructor(private _ProductsService:ProductsService){}
 
 
 ngOnInit(): void {
   this.getProduct()
+  this.getCategories()
 }
 
 
@@ -31,8 +34,36 @@ ngOnInit(): void {
     }, error =>{
       this.loading = false
       console.log(error.message)
+      alert(error)
     }
   )
 
   }
-}
+  getCategories(){
+    this.loading  = true
+    this._ProductsService.getAllCategories().subscribe((res:any) =>{
+      this.categories  = res; 
+      this.loading = false
+      console.log(res)
+    }, error =>{
+      this.loading = false
+      console.log(error.message)
+      alert(error)
+    }
+  )
+
+  }
+
+  filterCategory(event:any){
+    let value = event.target.value
+    this.getProductCategories(value)
+    
+  }
+  getProductCategories(keyeword:string){
+    this._ProductsService.getProductByCategoreis(keyeword).subscribe(
+      (res:any) =>{
+        this.Products = res
+      }
+    )
+  }
+} 
