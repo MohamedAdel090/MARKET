@@ -55,20 +55,25 @@ ngOnInit(): void {
   }
 
   filterCategory(event:any){
+     this.loading  = true
     let value = event.target.value
     if(value == "All"){
       this.getProduct()
     }
     else{
+      this.loading = false
           this.getProductCategories(value)
+
     }
 
     
   }
   getProductCategories(keyeword:string){
+       this.loading  = true
     this._ProductsService.getProductByCategoreis(keyeword).subscribe(
       (res:any) =>{
         this.Products = res
+        this.loading = false
       }
     )
   }
