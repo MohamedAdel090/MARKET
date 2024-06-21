@@ -7,13 +7,15 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SpineerComponent } from './components/spineer/spineer.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SpineerComponent
+    SpineerComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { SpineerComponent } from './components/spineer/spineer.component';
   ],
   exports: [
     HeaderComponent,
-    SpineerComponent
+    SpineerComponent,
+    SelectComponent
   ]
 })
 export class SharedModule { }

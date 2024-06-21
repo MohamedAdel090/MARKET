@@ -56,7 +56,13 @@ ngOnInit(): void {
 
   filterCategory(event:any){
     let value = event.target.value
-    this.getProductCategories(value)
+    if(value == "All"){
+      this.getProduct()
+    }
+    else{
+          this.getProductCategories(value)
+    }
+
     
   }
   getProductCategories(keyeword:string){
