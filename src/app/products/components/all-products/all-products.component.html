@@ -1,20 +1,14 @@
 <div class="box mt-5">
   <div class="my-2 w-25">
-    <app-select [data]="categories" [title]="'Categories'" (selectedValue)="filterCategory($event)"></app-select>
+    <app-select
+      [data]="categories"
+      [title]="'Categories'"
+      (selectedValue)="filterCategory($event)"
+    ></app-select>
   </div>
   <div class="row" *ngIf="!loading">
     <div *ngFor="let item of Products" class="col-md-3 col-sm-12">
-      <div class="item">
-        <img [src]="item.image" alt="Title" />
-        <div class="body">
-          <h4>{{ item.title }}</h4>
-          <p>{{ item.Description }}</p>
-        </div>
-        <div class="px3 mb-2 d-flex justify-content-between align-items-center">
-          <button class="btn btn-success">Add to cart</button>
-          <span>{{ item.price }} L.E</span>
-        </div>
-      </div>
+      <!-- <app-product></app-product> -->
     </div>
   </div>
   <div class="text-center w-100" *ngIf="loading">

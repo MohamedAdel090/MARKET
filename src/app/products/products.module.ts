@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductsDetalisComponent } from './components/products-detalis/products-detalis.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -9,10 +10,12 @@ import { ProductsDetalisComponent } from './components/products-detalis/products
 @NgModule({
   declarations: [
     ProductsDetalisComponent,
+    ProductComponent,
   ],
   imports: [
     CommonModule,
-    NgFor
+    NgFor,
+    
   ]
 })
 export class ProductsModule { }
