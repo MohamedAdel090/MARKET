@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SpineerComponent } from './components/spineer/spineer.component';
 import { SelectComponent } from './components/select/select.component';
-import { ProductComponent } from '../products/product/product.component';
+
 
 
 
@@ -16,7 +16,8 @@ import { ProductComponent } from '../products/product/product.component';
   declarations: [
     HeaderComponent,
     SpineerComponent,
-    SelectComponent
+    SelectComponent,
+   
   ],
   imports: [
     CommonModule,

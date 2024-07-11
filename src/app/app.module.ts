@@ -11,7 +11,7 @@ import { SharedModule as SharedModule } from "./shared/shared.module";
 @NgModule({
     declarations: [
         AppComponent,
-        AllProductsComponent
+       
     ],
     providers: [
         provideClientHydration()

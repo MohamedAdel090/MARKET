@@ -4,7 +4,7 @@ import { error } from 'node:console';
 
 @Component({
   selector: 'app-all-products',
-  templateUrl: './all-products.component.html',
+  templateUrl:'./all-products.component.html',
   styleUrls: ['./all-products.component.scss'] 
 })
 
