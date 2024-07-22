@@ -4,6 +4,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { ProductsDetalisComponent } from './components/products-detalis/products-detalis.component';
 import{ ProductComponent }from'./components/product/product.component'
 import { SharedModule } from "../shared/shared.module";
+// import { SharedModule_1 as SharedModule } from "../shared/shared.module";
 
 
 
@@ -16,9 +17,9 @@ import { SharedModule } from "../shared/shared.module";
         AllProductsComponent
     ],
     imports: [
-        CommonModule,
-        NgFor,
-        SharedModule
-    ]
+    CommonModule,
+    NgFor,
+    SharedModule
+]
 })
 export class ProductsModule { }

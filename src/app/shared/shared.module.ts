@@ -17,7 +17,6 @@ import { SelectComponent } from './components/select/select.component';
     HeaderComponent,
     SpineerComponent,
     SelectComponent,
-   
   ],
   imports: [
     CommonModule,
@@ -32,6 +31,7 @@ import { SelectComponent } from './components/select/select.component';
     HeaderComponent,
     SpineerComponent,
     SelectComponent,
+    
   ]
 })
 export class SharedModule { }
