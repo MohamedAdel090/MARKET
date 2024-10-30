@@ -7,9 +7,9 @@ import { Component, EventEmitter, Input, input, OnInit, Output, output } from '@
   styleUrl: './select.component.scss'
 })
 export class SelectComponent  implements OnInit{
-@Input() title:string = ''
+@Input() title:string = ""
 @Input()  data:any[] = []
-@Output()   selectedValue = new EventEmitter  
+@Output()   selectedValue = new EventEmitter () 
 
 
 constructor(){}

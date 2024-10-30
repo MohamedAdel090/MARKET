@@ -7,11 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit{
 
-  data: any;
+@Input()  data:any = {}
 
-@Input()  Data:any = {}
-
-  constructor(){}
+  constructor(){  }
 
   ngOnInit(): void {
     

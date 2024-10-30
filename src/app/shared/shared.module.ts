@@ -1,4 +1,3 @@
-import { AllProductsComponent } from './../products/components/all-products/all-products.component';
 import { NgModule } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
@@ -31,7 +30,6 @@ import { SelectComponent } from './components/select/select.component';
     HeaderComponent,
     SpineerComponent,
     SelectComponent,
-    
   ]
 })
 export class SharedModule { }

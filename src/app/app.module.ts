@@ -4,14 +4,13 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import * as sharedModule from './shared/shared.module';
-import { CommonModule } from '@angular/common';
-import { AllProductsComponent } from './products/components/all-products/all-products.component';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { SharedModule as SharedModule } from "./shared/shared.module";
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
     declarations: [
         AppComponent,
-       
     ],
     providers: [
         provideClientHydration()
@@ -21,7 +20,10 @@ import { SharedModule as SharedModule } from "./shared/shared.module";
         BrowserModule,
         AppRoutingModule,
         CommonModule,
-        sharedModule.SharedModule
+        SharedModule,
+        NgIf,
+        NgFor,
+        ProductsModule
     ]
 })
 export class AppModule { }
